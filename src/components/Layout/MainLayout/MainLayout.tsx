@@ -1,6 +1,6 @@
 import { IonRouterOutlet } from "@ionic/react";
-import Home from "../../../pages/Home";
 import { Redirect, Route } from "react-router";
+import Home from "../../../pages/Home";
 
 const MainLayout = () => {
   return (
