@@ -19,7 +19,9 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
           <div className="flex flex-col h-[100dvh] relative">
             <Navbar />
             <IonContent className="flex-1 relative z-10">
-              <div className="relative z-20 h-full px-4">{children}</div>
+              <div className="relative z-20 h-full px-4 bg-[#020412]">
+                {children}
+              </div>
             </IonContent>
             <Footer navItems={navItems} />
           </div>
