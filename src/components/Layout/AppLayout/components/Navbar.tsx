@@ -1,4 +1,4 @@
-import { logo } from "../../../../Assets/Images";
+import { logo } from "./../../../../assets/images";
 
 const Navbar = () => {
   return (
