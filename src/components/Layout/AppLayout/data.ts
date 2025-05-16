@@ -21,18 +21,18 @@ export const navItems: navItemsProps[] = [
     icon: matchesIcon,
     activeIcon: matchesActiveIcon,
     label: "Matches",
-    path: routes.home,
+    path: routes.matches,
   },
   {
     icon: statsIcon,
     activeIcon: statsActiveIcon,
     label: "Stats",
-    path: routes.home,
+    path: routes.stats,
   },
   {
     icon: aboutIcon,
     activeIcon: aboutActiveIcon,
     label: "About us",
-    path: routes.home,
+    path: routes.aboutUs,
   },
 ];
