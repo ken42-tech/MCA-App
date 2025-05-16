@@ -7,9 +7,9 @@ import {
   IonText,
   IonButton,
 } from "@ionic/react";
-import { chevronForward } from "ionicons/icons";
+import { arrowForward } from "ionicons/icons";
 
-const Matches = () => {
+const HomeMatches = () => {
   // Mock data - this would be replaced with API data in a real implementation
   const matchesData = {
     title: "Matches",
@@ -39,28 +39,23 @@ const Matches = () => {
   };
 
   return (
-    <div className="bg-brown-400 text-white p-4 py-2 w-full max-w-md">
+    <div className="bg-brown-400 text-white  w-full mb-12">
       {/* Single parent div containing both the header and cards */}
       <div className="w-full">
         {/* Header section */}
-        <div className="flex w-full justify-between items-center mb-0">
-          <h2 className="text-xl pl-4 font-bold">{matchesData.title}</h2>
+        <div className="flex w-full justify-between items-center mb-4">
+          <h2 className="text-xl  font-bold">{matchesData.title}</h2>
           {matchesData.viewAll && (
-            <IonButton
-              fill="clear"
-              color="light"
-              size="default"
-              className="flex items-center p-0 h-auto"
-            >
+            <button className="flex items-center p-0 h-auto">
               View all
-              <IonIcon icon={chevronForward} slot="end" />
-            </IonButton>
+              <IonIcon icon={arrowForward} slot="end" />
+            </button>
           )}
         </div>
 
         {/* Cards section */}
         {matchesData.matches.map((match) => (
-          <IonCard
+          <div
             key={match.id}
             className="bg-black border-b-[6px] border-[#F26C21] border-x-[1px] border-t-[1px] text-white rounded-3xl overflow-hidden mb-2 mt-1"
           >
@@ -102,11 +97,11 @@ const Matches = () => {
             <div className="py-2 px-3 text-[#50B848] text-xs bg-opacity-50">
               {match.status}
             </div>
-          </IonCard>
+          </div>
         ))}
       </div>
     </div>
   );
 };
 
-export default Matches;
+export default HomeMatches;

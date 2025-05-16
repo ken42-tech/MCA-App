@@ -1,6 +1,10 @@
 export * from "./layout/footer";
 import logo from "./logo/logo.png";
 import bgBannerImg from "./home/bg.png";
+import news1 from "./home/news/n1.png";
+import news2 from "./home/news/n2.png";
+import news3 from "./home/news/n3.png";
+import i1 from "./home/photos/i1.png";
 import t1 from "./home/teams/t1.png";
 import t2 from "./home/teams/t2.png";
 import t3 from "./home/teams/t3.png";
@@ -13,4 +17,5 @@ import tp1 from "./home/TopPerformers/players/tp1.png";
 import tp2 from "./home/TopPerformers/players/tp2.png";
 import tpPatternBg from "./home/TopPerformers/pattern-bg.png";
 
-export { logo, bgBannerImg,t1,t2,t3,t4,t5,t6,t7,t8,tp1,tp2,tpPatternBg };
+export { logo, bgBannerImg,t1,t2,t3,t4,t5,t6,t7,t8,tp1,tp2,tpPatternBg,news1,news2,news3,i1 };
+ 
