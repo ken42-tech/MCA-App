@@ -2,6 +2,7 @@ import { Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import "swiper/css/navigation";
 
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 
@@ -12,9 +13,18 @@ interface CarouselProps {
   children: any;
   sectionName: string;
   effect?: string;
+  onSlideChange?: (index: number) => void; // Add callback to handle slide change
 }
 
-export const Carousel = ({ sliderPerView, spaceBetween, loop, children, sectionName, effect }: CarouselProps) => {
+export const Carousel = ({
+  sliderPerView,
+  spaceBetween,
+  loop,
+  children,
+  sectionName,
+  effect,
+  onSlideChange,
+}: CarouselProps) => {
   const blogAutoPlayConfig = {
     delay: 2500,
     disableOnInteraction: false,
@@ -51,6 +61,10 @@ export const Carousel = ({ sliderPerView, spaceBetween, loop, children, sectionN
       autoPlayConfig = blogAutoPlayConfig;
       moduleConfig.push(Autoplay);
       break;
+    case "homeSwipper":
+      autoPlayConfig = blogAutoPlayConfig;
+      moduleConfig.push(Autoplay, Pagination, Navigation);
+      break;
     default:
       break;
   }
@@ -60,21 +74,27 @@ export const Carousel = ({ sliderPerView, spaceBetween, loop, children, sectionN
       <Swiper
         slidesPerView={sliderPerView}
         spaceBetween={spaceBetween}
-        pagination={{
-          clickable: true,
-        }}
+        pagination={{ clickable: true }}
         autoplay={autoPlayConfig}
         effect={effect}
         modules={moduleConfig}
         loop={loop}
-        className="mySwiper">
+        className="mySwiper"
+        onSlideChange={(swiper) => onSlideChange?.(swiper.realIndex)}
+      >
         <style>
           {`
+          .swiper-pagination-bullet {
+            background: #4b5563; /* Gray-600 */
+            opacity: 1;
+            padding-top:10px;
+          }
           .swiper-pagination-bullet-active {
-            background-color: #604797 !important;
+            background: #ffffff !important; /* Active: White */
           }
         `}
         </style>
+
         {children}
       </Swiper>
     </>
