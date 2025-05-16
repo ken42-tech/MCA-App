@@ -62,7 +62,7 @@ const VideosSection: React.FC = () => {
   };
 
   return (
-    <div className="bg-[linear-gradient(0deg,_#E35C16_-91.13%,_#000000_49.75%)] border p-6 pb-10">
+    <div className="bg-[linear-gradient(0deg,_#E35C16_-91.13%,_#000000_49.75%)]  mt-12 pb-10">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-white text-2xl font-bold">
           Latest <span className="text-orange-500">videos</span>

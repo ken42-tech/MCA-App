@@ -61,7 +61,7 @@ const News: React.FC = () => {
   ];
 
   return (
-    <div className="bg-black p-6">
+    <div className="bg-black ">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-white text-2xl font-bold">
           Latest <span className="text-orange-500">news</span>
