@@ -3,6 +3,9 @@ import HomeMatches from "./Components/HomeMatches";
 import HomePhoto from "./Components/HomePhoto";
 import News from "./Components/News";
 import Videos from "./Components/Videos";
+import TeamsLogo from "./Components/TeamsLogo";
+import TopPerformers from "./Components/TopPerformers";
+
 
 const Home = () => {
   return (
@@ -11,8 +14,10 @@ const Home = () => {
       <HomeMatches />
       <News />
       <Videos />
+      <TeamsLogo />
+      <TopPerformers />
       <HomePhoto />
-    </div>
+    </>
   );
 };
 
