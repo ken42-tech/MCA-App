@@ -49,8 +49,8 @@ const Footer: React.FC<FooterProps> = ({ navItems }) => {
             }px)`,
           }}
         >
-          <div className="absolute left-[-22px] top-[20px] w-5 h-5 bg-transparent border-t-[8px] border-t-[#000] rounded-tr-[20px]" />
-          <div className="absolute right-[-22px] top-[20px] w-5 h-5 bg-transparent border-t-[8px] border-t-[#000] rounded-tl-[20px]" />
+          <div className="absolute left-[-22px] top-[20px] w-5 h-5 bg-transparent border-t-[8px] border-t-[#020412] rounded-tr-[20px]" />
+          <div className="absolute right-[-22px] top-[20px] w-5 h-5 bg-transparent border-t-[8px] border-t-[#020412] rounded-tl-[20px]" />
         </div>
       </div>
     </div>
