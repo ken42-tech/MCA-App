@@ -1,31 +1,24 @@
 import { useIonRouter } from "@ionic/react";
 import { useLocation } from "react-router-dom";
 
-const Footer: React.FC<FooterProps> = ({
-  navItems,
-  activeNavIndex,
-  setActiveNavIndex,
-}) => {
+const Footer: React.FC<FooterProps> = ({ navItems }) => {
   const router = useIonRouter();
   const location = useLocation();
 
-  const handleNavClick = (index: number, path: string) => {
-    setActiveNavIndex(index);
-    router.push(path, "forward"); // 'forward' gives native iOS-style transition
+  const handleNavClick = (path: string) => {
+    router.push(path, "forward");
   };
 
-  console.log(location.pathname);
   return (
     <div className="w-full flex justify-center items-center z-50 relative bg-[#ffffff15] backdrop-blur-xl ">
       <div className="h-[.5px] w-full absolute top-0 left-0 bg-gradient-to-r from-transparent via-gray-500 to-transparent" />
       <div className="flex items-center  shadow-md w-fit max-w-[400px] h-[68px] relative px-2 gap-[10px]">
         {navItems.map((item, index) => {
           const isActive = location.pathname === item.path;
-          console.log(item.path);
           return (
             <div
               key={index}
-              onClick={() => handleNavClick(index, item.path)}
+              onClick={() => handleNavClick(item.path)}
               className="w-[70px] h-[70px] flex flex-col items-center justify-center cursor-pointer relative transition-all"
             >
               <img
