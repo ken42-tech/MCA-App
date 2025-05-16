@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IonIcon } from "@ionic/react";
 import { chevronBackOutline, chevronForwardOutline } from "ionicons/icons";
-import { bgBannerImg } from "../../../Assets/Images";
+import { bgBannerImg } from "../../../assets/images";
 
 const HomeBanner = () => {
   // Sample slide data - replace with your actual data
