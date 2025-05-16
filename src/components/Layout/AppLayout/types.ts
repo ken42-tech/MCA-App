@@ -6,6 +6,6 @@ interface navItemsProps {
 }
 interface FooterProps {
   navItems: navItemsProps[];
-  activeNavIndex: number;
-  setActiveNavIndex: (index: number) => void;
+  // activeNavIndex: number;
+  // setActiveNavIndex: (index: number) => void;
 }
