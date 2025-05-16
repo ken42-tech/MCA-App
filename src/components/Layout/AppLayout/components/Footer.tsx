@@ -42,7 +42,7 @@ const Footer: React.FC<FooterProps> = ({ navItems }) => {
         })}
 
         <div
-          className="absolute top-[-36px] w-[70px] h-[70px] bg-radial from-[#ECD815] via-[#F58220] to-[#F15A22] rounded-full border-[8px] border-[#000] transition-all duration-500"
+          className="absolute top-[-36px] w-[70px] h-[70px] bg-radial from-[#ECD815] via-[#F58220] to-[#F15A22] rounded-full border-[8px] border-[#020412] transition-all duration-500"
           style={{
             transform: `translateX(${
               navItems.findIndex((n) => location.pathname === n.path) * 80
