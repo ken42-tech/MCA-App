@@ -10,7 +10,6 @@ interface AppLayoutProps {
 }
 
 const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
-  const [activeNavIndex, setActiveNavIndex] = useState(0);
   const isMobile = true;
 
   return (
@@ -22,11 +21,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
             <IonContent className="flex-1 relative z-10">
               <div className="relative z-20 h-full px-4">{children}</div>
             </IonContent>
-            <Footer
-              navItems={navItems}
-              activeNavIndex={activeNavIndex}
-              setActiveNavIndex={setActiveNavIndex}
-            />
+            <Footer navItems={navItems} />
           </div>
         </IonPage>
       ) : (
