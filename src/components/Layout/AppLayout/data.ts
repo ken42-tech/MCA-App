@@ -7,7 +7,7 @@ import {
   matchesIcon,
   statsActiveIcon,
   statsIcon,
-} from "../../../Assets/Images";
+} from "../../../assets/images";
 import routes from "../../../utils/routes";
 
 export const navItems: navItemsProps[] = [
