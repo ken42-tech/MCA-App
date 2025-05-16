@@ -1,5 +1,5 @@
 import HomeBanner from "./Components/HomeBanner";
-import Matches from "./Components/Matches";
+import HomeMatches from "./Components/HomeMatches";
 import News from "./Components/News";
 import Videos from "./Components/Videos";
 
@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <HomeBanner />
-      <Matches />
+      <HomeMatches />
       <News />
       <Videos />
     </>

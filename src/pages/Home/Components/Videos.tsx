@@ -1,23 +1,16 @@
 import React from "react";
 import { IonIcon } from "@ionic/react";
-import { arrowForward, playCircle } from "ionicons/icons";
+import { arrowForward } from "ionicons/icons";
 import { news1 } from "../../../Assets/Images";
 
-// Define TypeScript interfaces for image content that can be replaced with video later
 interface MediaItemProps {
   image: string;
   title: string;
   date: string;
   duration: string;
-  // videoUrl will be used in the future when replacing with videos
   videoUrl?: string;
 }
 
-interface MediaItem extends MediaItemProps {
-  id: number;
-}
-
-// MediaItem component shows an image that can be replaced with video later
 const MediaItem: React.FC<MediaItemProps> = ({
   image,
   title,
@@ -25,20 +18,18 @@ const MediaItem: React.FC<MediaItemProps> = ({
   duration,
 }) => {
   return (
-    <div className="relative p-5">
-      <div className="relative rounded-xl overflow-hidden w-full h-48">
-        {/* Image with play button in bottom right corner */}
-        <div className="relative">
-          <img
-            src={image}
-            alt={title}
-            className="w-full object-cover rounded-lg"
-          />
+    <div className="w-full  border p-5 rounded-2xl border-gray-700 ">
+      {" "}
+      {/* Limit max width if needed */}
+      <div className="relative w-full h-40 rounded-xl overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover rounded-lg"
+        />
 
-          {/* Duration indicator in top left */}
-          <div className="absolute bottom-20 right-2 z-50 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
-            {duration}
-          </div>
+        <div className="absolute bottom-2 right-2 z-50 bg-black bg-opacity-80 text-white text-xs px-2 py-1 rounded">
+          {duration}
         </div>
       </div>
       <div className="mt-2">
@@ -49,9 +40,7 @@ const MediaItem: React.FC<MediaItemProps> = ({
   );
 };
 
-// Main Videos component with one centered card
 const VideosSection: React.FC = () => {
-  // Single media item to be displayed in the center
   const mediaItem = {
     id: 1,
     image: news1,
@@ -62,8 +51,8 @@ const VideosSection: React.FC = () => {
   };
 
   return (
-    <div className="bg-[linear-gradient(0deg,_#E35C16_-91.13%,_#000000_49.75%)]  mt-12 pb-10">
-      <div className="flex justify-between items-center mb-4">
+    <div className="w-full bg-[linear-gradient(0deg,_#E35C16_-91.13%,_#000000_49.75%)] mt-12 pb-10 ">
+      <div className="flex justify-between items-center mb-4 max-w-7xl mx-auto">
         <h2 className="text-white text-2xl font-bold">
           Latest <span className="text-orange-500">videos</span>
         </h2>
@@ -72,7 +61,7 @@ const VideosSection: React.FC = () => {
         </button>
       </div>
 
-      <div className="border rounded-2xl border-gray-600 flex justify-center">
+      <div className="w-full flex justify-center max-w-7xl mx-auto">
         <MediaItem
           key={mediaItem.id}
           image={mediaItem.image}

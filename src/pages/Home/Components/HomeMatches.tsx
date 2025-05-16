@@ -9,7 +9,7 @@ import {
 } from "@ionic/react";
 import { arrowForward } from "ionicons/icons";
 
-const Matches = () => {
+const HomeMatches = () => {
   // Mock data - this would be replaced with API data in a real implementation
   const matchesData = {
     title: "Matches",
@@ -104,4 +104,4 @@ const Matches = () => {
   );
 };
 
-export default Matches;
+export default HomeMatches;
