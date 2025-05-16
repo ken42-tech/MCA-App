@@ -7,7 +7,7 @@ import {
   IonText,
   IonButton,
 } from "@ionic/react";
-import { chevronForward } from "ionicons/icons";
+import { arrowForward } from "ionicons/icons";
 
 const Matches = () => {
   // Mock data - this would be replaced with API data in a real implementation
@@ -53,7 +53,7 @@ const Matches = () => {
               className="flex items-center p-0 h-auto"
             >
               View all
-              <IonIcon icon={chevronForward} slot="end" />
+              <IonIcon icon={arrowForward} slot="end" />
             </IonButton>
           )}
         </div>
